@@ -1,7 +1,7 @@
 #just test
 FROM debian:wheezy      
 
-RUN apt-get update && apt-get install --no-install-recommends -y \
+RUN apt-get update && apt-get install --no-install-recommends -y --force-yes \
     ca-certificates \
     curl \
     mercurial \
