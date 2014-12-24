@@ -1,4 +1,4 @@
-FROM debian:wheezy      #just test
+FROM wheezy      #just test
 
 RUN apt-get update && apt-get install --no-install-recommends -y \
     ca-certificates \
