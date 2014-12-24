@@ -14,7 +14,8 @@ RUN echo "deb http://mirrors.163.com/debian unstable main contrib non-free" > /e
 #RUN curl -s https://storage.googleapis.com/golang/go1.3.linux-amd64.tar.gz | tar -v -C /usr/local -xz
 ADD . /app/
 RUN tar xzvf /app/go1.3.linux-amd64.tar.gz \
-  && mv go /usr/local 
+  && mv go /usr/local \
+  && rm /app/go1.3.linux-amd64.tar.gz
 
 ENV GOPATH /go
 ENV GOROOT /usr/local/go
